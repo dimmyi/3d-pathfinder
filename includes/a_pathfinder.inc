@@ -132,7 +132,7 @@ stock CY_AddNode(Float:x, Float:y, Float:z, Float: maxRange, Float:max_zdiff = 2
 		    gNodesConnections[CY_PATHFINDER_COUNT][parentId] = 0;
 		}
 
-	    gNodesPriorityG[CY_PATHFINDER_COUNT] = gDistanceBetweenPoints(x, y, z, gNodesPath[cy_StartPosX], gNodesPath[cy_StartPosY], gNodesPath[cy_StartPosZ]);
+	    gNodesPriorityG[CY_PATHFINDER_COUNT] = gDistanceBetweenPoints(x, y, z, gNodesPositions[1][0], gNodesPositions[1][1], gNodesPositions[1][2]);
         gNodesPriorityF[CY_PATHFINDER_COUNT] = gNodesPriorityG[CY_PATHFINDER_COUNT] + gDistanceBetweenPoints(x, y, z, gNodesPath[cy_EndPosX], gNodesPath[cy_EndPosY], gNodesPath[cy_EndPosZ]);
 
 	   	CY_PATHFINDER_COUNT++;
